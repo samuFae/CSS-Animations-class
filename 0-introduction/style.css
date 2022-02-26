@@ -1,0 +1,52 @@
+.square {
+	width: 250px;
+	height: 250px;
+	margin: 1rem 0 2rem 1rem;
+	background-color: blue;	
+}
+
+/* Blue to green */
+#color .square {
+	transition-delay: 0.5s;
+transition-duration: 2s;
+transition-property: background-color;
+transition-timing-function: linear;
+
+}
+
+#color .square:hover {
+	background-color: green
+}
+
+
+/* Square to circle */
+#circle .square {
+	transition: all 2s ease-in-out;
+}
+
+#circle .square:hover { 
+	border-radius: 50%;
+	background-color: purple;
+}
+
+
+/* Visible to invisible */
+#opacity .square {
+	transition: all 2s ease-in-out;
+}
+
+#opacity .square:hover { 
+	opacity: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

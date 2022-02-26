@@ -1,0 +1,83 @@
+.square {
+	width: 250px;
+	height: 250px;
+	margin: 1rem 0 2rem 1rem;
+	background-color: blue;	
+}
+
+section {
+	padding: 5rem 0;
+}
+
+.big-spacer {
+	height: 900px;
+}
+
+#timing {
+	display: flex;
+	justify-content: space-around;
+}
+
+#timing .square {
+	position:relative;
+	right: 100px;
+	top: 50px;
+	width: 100px;
+	height: 100px;
+}
+
+/* Blue to green */
+#keyframes .square {
+	transform: translate(0,0) rotate(0) scale(1);
+	animation: squareAnimate 2s;
+}
+
+
+@keyframes squareAnimate {
+	0% {transform: translate(0px,0px) rotate(0deg)}
+	100%{transform: translate(800px,0) rotate(360deg) scale(2)}
+}
+
+
+#iteration .square {
+	 animation: squareAnimate 0.2s;
+	 animation-iteration-count: 10;
+}
+
+
+#fill .square {
+	animation: squareAnimate 2s;
+	animation-fill-mode: forwards;
+}
+
+#direction .square {
+	animation: squareAnimate 2s 4 alternate;
+  	animation: squareAnimate 2s 4 reverse;
+	animation: squareAnimate 2s 4 alternate-reverse;
+}
+
+
+@keyframes squareAnimateCompare {
+	0% {transform: translate(0px,0px)}
+	100%{transform: translate(0,800px)}
+}
+
+#timing .square.linear{
+	animation: squareAnimateCompare 2s linear;
+}
+
+#timing .square.ease-in{
+	animation: squareAnimateCompare 2s infinite alternate ease-in;
+}
+
+#timing .square.ease-out{
+	animation: squareAnimateCompare 2s infinite alternate ease-out;
+}
+
+#timing .square.ease-in-out{
+	animation: squareAnimateCompare 2s infinite alternate ease-in-out;
+}
+
+#timing .square.bezier{
+	animation: squareAnimateCompare 2s infinite alternate cubic-bezier(0,1.79,1,-0.9);
+}

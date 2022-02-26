@@ -1,0 +1,33 @@
+.cat {
+  background: url(http://stash.rachelnabors.com/animation-workshop/sprite_catwalk.png) 0 -2400px no-repeat; 
+  height: 200px;
+  width: 400px;
+  margin: 100px auto 0;
+  position: relative;
+  left: 500px;
+  animation: catWalk 1s steps(12) infinite, catMoves 3s linear infinite alternate, catChangeDirection 3s 1.5s steps(1) infinite alternate;
+}
+
+
+
+@keyframes catWalk {
+  from {background-position: 0 0}
+  to {background-position: 0 -2400px}
+}
+
+@keyframes catMoves {
+  0% {left: 500px}
+  100% {left: -500px}
+}
+
+
+@keyframes catChangeDirection {
+  0% {transform: scaleX(1)}
+  50%{transform: scaleX(-1)}
+  100% {transform: scaleX(1)}
+}
+
+
+.cat:hover {
+  animation-play-state: paused;
+}
